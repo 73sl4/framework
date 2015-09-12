@@ -1,0 +1,16 @@
+{
+    "name": "73sl4/framework",
+    "description": "Mini framework",
+    "authors": [
+        {
+            "name": "Vivek",
+            "email": "viveklakhera@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+	    "psr-0": {
+	    	"App": "./"
+	    }
+	}
+}
