@@ -22,7 +22,6 @@
       {
         return $this->adapter[$config->get('driver')];
       }
-
       switch($config->get('driver'))
       {
         case 'mysql':

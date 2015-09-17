@@ -12,10 +12,12 @@
 
     public function __construct()
     {
-      if(file_exists('./config.php'))
+      if(file_exists('./../App/configuration.php'))
       {
-      	$this->config = require './configuration.php';
+      	$this->config = require './../App/configuration.php';
       }
+
+
     }
 
     public function get($name, $default = null)

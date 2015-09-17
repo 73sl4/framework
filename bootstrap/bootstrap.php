@@ -5,9 +5,9 @@
  * Date: 11/09/15
  * Time: 6:59 PM
  */
-  if(file_exists('./vendor/autoload.php'))
+  if(file_exists('./../vendor/autoload.php'))
   {
-    require './vendor/autoload.php';
+    require './../vendor/autoload.php';
   }
   else
   {
@@ -20,18 +20,11 @@
     'config'  => 'App\Config'
   ];
 
-  require './HelperTrait.php';
-  require './GeneralController.php';
-  require './route.php';
-  require './DB.php';
-  require './config.php';
-  require './dispatcher.php';
-
   $dispatcher = App\Dispatcher::getInstance($services);
   $route = $dispatcher->get('route');
   $db = $dispatcher->get('db');
 
-  require './router.php';
+  require './../App/router.php';
 
   $TERMINAL_VAL = $REQUEST_VAL = null;
 
@@ -46,7 +39,7 @@
 
   if($REQUEST_VAL)
   {
-    if(!file_exists('./router.php'))
+    if(!file_exists('./../App/router.php'))
     {
       throw new \Exception('Routes file not found');
     }

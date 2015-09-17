@@ -133,7 +133,7 @@
       $this->headers = getallheaders();
 
       $post = null;
-      switch($this->headers['Content-Type'])
+      switch($this->header('Content-Type'))
       {
         case 'application/json':
         case 'text/x-json':
